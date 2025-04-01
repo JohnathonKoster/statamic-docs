@@ -27,11 +27,11 @@ class AppServiceProvider extends ServiceProvider
             return [new DescriptionListExtension, new HintExtension, new TabbedCodeBlockExtension, new AttributesExtension];
         });
 
-        if (config('torchlight.token') && ! app()->runningConsoleCommand('search:update')) {
+        /*if (config('torchlight.token') && ! app()->runningConsoleCommand('search:update')) {
             Markdown::addExtensions(function () {
                 return [new TorchlightExtension];
             });
-        }
+        }*/
     }
 
     /**
